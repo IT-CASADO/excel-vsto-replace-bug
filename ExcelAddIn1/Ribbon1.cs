@@ -25,5 +25,16 @@ namespace ExcelAddIn1
             range.Interior.Color = XlRgbColor.rgbAquamarine;    // only to verify that correct cells are in the range
             range.Replace(What: " ", Replacement: "");
         }
+
+        private void button2_Click(object sender, RibbonControlEventArgs e)
+        {
+            Workbook workbook = Globals.ThisAddIn.Application.ActiveWorkbook;
+            Worksheet worksheet = workbook.Worksheets[1];
+            
+            Range range = worksheet.Cells[10, 7];
+            range.Interior.Color = XlRgbColor.rgbAquamarine;    // only to verify that correct cells are in the range
+            range.Replace(What: " ", Replacement: "");
+
+        }
     }
 }
